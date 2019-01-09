@@ -111,11 +111,13 @@ Java客户端不依赖任何框架，能够运行于所有Java运行时环境，
 # Support
 <table>
   <thead>
-    <th>Apollo配置中心技术支持②群<br />群号：904287263</th>
+    <th>Apollo配置中心技术支持③群<br />群号：742035428</th>
+    <th>Apollo配置中心技术支持②群<br />群号：904287263（已满）</th>
     <th>Apollo配置中心技术支持①群<br />群号：375526581（已满）</th>
   </thead>
   <tbody>
     <tr>
+      <td><img src="https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/tech-support-qq-3.png" alt="tech-support-qq-3"></td>
       <td><img src="https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/tech-support-qq-2.png" alt="tech-support-qq-2"></td>
       <td><img src="https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/tech-support-qq-1.png" alt="tech-support-qq-1"></td>
     </tr>
@@ -244,3 +246,14 @@ The project is licensed under the [Apache 2 license](https://github.com/ctripcor
 ![搜款网](https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/known-users/vvic.png) 
 ![米庄理财](https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/known-users/mizlicai.png) 
 ![贝吉塔网络科技](https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/known-users/bjt.png) 
+![微盟](https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/known-users/weimob.png) 
+![网易卡搭](https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/known-users/kada.png) 
+![股书](https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/known-users/kapbook.png) 
+![聚贸](https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/known-users/jumore.png) 
+![广联达bimface](https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/known-users/bimface.png) 
+![环球易购](https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/known-users/globalgrow.png) 
+![浙江执御](https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/known-users/jollychic.png) 
+
+# Awards
+
+<img src="https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/awards/oschina-2018-award.jpg" width="240px" alt="2018 年度最受欢迎中国开源软件">

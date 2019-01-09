@@ -15,7 +15,6 @@ import com.ctrip.framework.apollo.openapi.auth.ConsumerPermissionValidator;
 import com.ctrip.framework.apollo.openapi.dto.OpenGrayReleaseRuleDTO;
 import com.ctrip.framework.apollo.openapi.dto.OpenNamespaceDTO;
 import com.ctrip.framework.apollo.openapi.util.OpenApiBeanUtils;
-import com.ctrip.framework.apollo.portal.component.PermissionValidator;
 import com.ctrip.framework.apollo.portal.entity.bo.NamespaceBO;
 import com.ctrip.framework.apollo.portal.service.NamespaceBranchService;
 import com.ctrip.framework.apollo.portal.service.ReleaseService;
@@ -40,7 +39,7 @@ public class NamespaceBranchController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/branches", method = RequestMethod.GET)
+    @GetMapping(value = "/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/branches")
     public OpenNamespaceDTO findBranch(@PathVariable String appId,
                                        @PathVariable String env,
                                        @PathVariable String clusterName,
@@ -53,7 +52,7 @@ public class NamespaceBranchController {
     }
 
     @PreAuthorize(value = "@consumerPermissionValidator.hasCreateNamespacePermission(#request, #appId)")
-    @RequestMapping(value = "/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/branches", method = RequestMethod.POST)
+    @PostMapping(value = "/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/branches")
     public OpenNamespaceDTO createBranch(@PathVariable String appId,
                                          @PathVariable String env,
                                          @PathVariable String clusterName,
@@ -70,11 +69,11 @@ public class NamespaceBranchController {
         if (namespaceDTO == null) {
             return null;
         }
-        return BeanUtils.transfrom(OpenNamespaceDTO.class, namespaceDTO);
+        return BeanUtils.transform(OpenNamespaceDTO.class, namespaceDTO);
     }
 
     @PreAuthorize(value = "@consumerPermissionValidator.hasModifyNamespacePermission(#request, #appId, #namespaceName, #env)")
-    @RequestMapping(value = "/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/branches/{branchName}", method = RequestMethod.DELETE)
+    @DeleteMapping(value = "/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/branches/{branchName}")
     public void deleteBranch(@PathVariable String appId,
                              @PathVariable String env,
                              @PathVariable String clusterName,
@@ -102,7 +101,7 @@ public class NamespaceBranchController {
 
     }
 
-    @RequestMapping(value = "/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/branches/{branchName}/rules", method = RequestMethod.GET)
+    @GetMapping(value = "/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/branches/{branchName}/rules")
     public OpenGrayReleaseRuleDTO getBranchGrayRules(@PathVariable String appId, @PathVariable String env,
                                                      @PathVariable String clusterName,
                                                      @PathVariable String namespaceName,
@@ -115,7 +114,7 @@ public class NamespaceBranchController {
     }
 
     @PreAuthorize(value = "@consumerPermissionValidator.hasModifyNamespacePermission(#request, #appId, #namespaceName, #env)")
-    @RequestMapping(value = "/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/branches/{branchName}/rules", method = RequestMethod.PUT)
+    @PutMapping(value = "/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/branches/{branchName}/rules")
     public void updateBranchRules(@PathVariable String appId, @PathVariable String env,
                                   @PathVariable String clusterName, @PathVariable String namespaceName,
                                   @PathVariable String branchName, @RequestBody OpenGrayReleaseRuleDTO rules,
